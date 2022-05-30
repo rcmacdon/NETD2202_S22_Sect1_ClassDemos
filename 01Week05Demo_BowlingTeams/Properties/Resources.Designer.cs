@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Week04_demo1_BowlingTeam.Properties {
+namespace _01Week05Demo_BowlingTeams.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace Week04_demo1_BowlingTeam.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Week04_demo1_BowlingTeam.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("_01Week05Demo_BowlingTeams.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

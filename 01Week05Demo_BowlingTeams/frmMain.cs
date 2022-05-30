@@ -1,11 +1,11 @@
 ﻿/* ----------------------------------
  * Author:  Clint MacDonald
- * Date:    May 24, 2021
+ * Date:    May 30, 2022
  * Description:
  *      A sample application that takes a bowling teams scores and 
  *      performs calculations with data validation functions
  * Revision History:
- *      1.0     May 24, 2021        Clint MacDonald         Initial Version
+ *      1.0     May 30, 2022        Clint MacDonald         Initial Version
  * ----------------------------------
  */
 
@@ -21,17 +21,17 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 #endregion
 
-namespace w4_demo1_BowlingTeam
-{
-    public partial class formMain : Form
-    {
 
-        public formMain()
+namespace _01Week05Demo_BowlingTeams
+{
+    public partial class frmMain : Form
+    {
+        public frmMain()
         {
             InitializeComponent();
         }
 
-        #region GLOBAL VARIABLE DECLARATIONS
+       #region GLOBAL VARIABLE DECLARATIONS
 
         const int MaxPlayers = 4;
         const int MaxGames = 3;
@@ -50,12 +50,13 @@ namespace w4_demo1_BowlingTeam
         private void formMain_Load(object sender, EventArgs e)
         {
             playerNames = new TextBox[] { textBoxName1, textBoxName2, textBoxName3, textBoxName4 };
-            scores = new TextBox[,] { 
-                { textBoxScoreP1G1, textBoxScoreP1G2, textBoxScoreP1G3 },
-                { textBoxScoreP2G1, textBoxScoreP2G2, textBoxScoreP2G3 },
-                { textBoxScoreP3G1, textBoxScoreP3G2, textBoxScoreP3G3 },
-                { textBoxScoreP4G1, textBoxScoreP4G2, textBoxScoreP4G3 } 
-            };
+
+            scores = new TextBox[,] {
+                    { textBoxScoreP1G1, textBoxScoreP1G2, textBoxScoreP1G3 },
+                    { textBoxScoreP2G1, textBoxScoreP2G2, textBoxScoreP2G3 },
+                    { textBoxScoreP3G1, textBoxScoreP3G2, textBoxScoreP3G3 },
+                    { textBoxScoreP4G1, textBoxScoreP4G2, textBoxScoreP4G3 }
+                };
             playerTotals = new Label[] { labelTotalP1, labelTotalP2, labelTotalP3, labelTotalP4 };
             SetDefaults();
         }
@@ -64,7 +65,7 @@ namespace w4_demo1_BowlingTeam
         {
             // before performing calculations,
             // validate that all data is entered correctly
-            int highScore = MaxScore*MaxGames;
+            int highScore = MaxScore * MaxGames;
             int lowScore = MinScore;
             int totalScore = 0;
             int[] totalScores = new int[MaxPlayers];
@@ -97,7 +98,7 @@ namespace w4_demo1_BowlingTeam
 
                 // now we can calcualte averages and team score
                 double avgScore = Math.Round(Convert.ToDouble(totalScore) / Convert.ToDouble(MaxPlayers), 2);
-                double teamScore = Math.Round(Convert.ToDouble(totalScore-lowScore)/ Convert.ToDouble(MaxPlayers -1), 2);
+                double teamScore = Math.Round(Convert.ToDouble(totalScore - lowScore) / Convert.ToDouble(MaxPlayers - 1), 2);
 
                 // output
                 labelLowScore.Text = lowScore.ToString();
@@ -156,14 +157,14 @@ namespace w4_demo1_BowlingTeam
                 // for each player we need to iterate through games
                 for (int g = 1; g <= MaxGames; g++)
                 {
-                       if (!(IsNumeric(scores[p-1,g-1].Text.Trim(), MinScore, MaxScore)))
-                       {
-                         if (retVal)
-                            {
-                                MessageBox.Show("Score " + g + " for player " + p + " is invalid");
-                            }
-                            retVal = false;
+                    if (!(IsNumeric(scores[p - 1, g - 1].Text.Trim(), MinScore, MaxScore)))
+                    {
+                        if (retVal)
+                        {
+                            MessageBox.Show("Score " + g + " for player " + p + " is invalid");
                         }
+                        retVal = false;
+                    }
                 }
             }
             return retVal;
@@ -195,7 +196,6 @@ namespace w4_demo1_BowlingTeam
             return (inputValue >= minValue && inputValue <= maxValue);
         }
 
-
         #endregion
 
         #region GENERAL METHODS
@@ -213,12 +213,11 @@ namespace w4_demo1_BowlingTeam
         #endregion
 
         #region TESTING METHODS
-       
+
 
         private void buttonTestValues_Click(object sender, EventArgs e)
         {
-            randomPlayerNames = new string[] { "Joe", "Bob", "Sally", "Jennifer", "Lee", 
-                "Jim", "Raj", "Darren", "Stephen", "x", " ", "    s" };
+            randomPlayerNames = new string[] { "Joe", "Bob", "Sally", "Jennifer", "Lee", "Jim", "Raj", "Darren", "Stephen", "x", " ", "    s", "Korry", "Frank" };
             populateItems();
         }
 
@@ -231,10 +230,8 @@ namespace w4_demo1_BowlingTeam
             }
 
             // scores
-            foreach (TextBox tBox in scores)
-            {
-                tBox.Text = GetRandom(MinScore, MaxScore).ToString();
-            }
+            foreach (TextBox tBox in scores) tBox.Text = GetRandom(MinScore, MaxScore).ToString();
+
         }
 
 
@@ -248,6 +245,6 @@ namespace w4_demo1_BowlingTeam
         #endregion
 
         #endregion
-      
+
     }
 }

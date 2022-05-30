@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace w4_demo1_BowlingTeam
+namespace _01Week05Demo_BowlingTeams
 {
     static class Program
     {
@@ -17,7 +17,7 @@ namespace w4_demo1_BowlingTeam
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new formMain());
+            Application.Run(new frmMain());
         }
     }
 }
