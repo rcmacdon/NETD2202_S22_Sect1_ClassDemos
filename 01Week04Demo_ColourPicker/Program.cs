@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace _01Week03DemoC___PartyTime
+namespace _01Week04Demo_ColourPicker
 {
     static class Program
     {
@@ -17,7 +17,7 @@ namespace _01Week03DemoC___PartyTime
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new frmMain());
         }
     }
 }
