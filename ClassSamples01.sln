@@ -15,7 +15,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01Week04Demo_ColourPicker",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01Week05Demo_BowlingTeams", "01Week05Demo_BowlingTeams\01Week05Demo_BowlingTeams.csproj", "{C1BA484C-F5AF-44D5-994E-5BA3DF07E556}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01Week05Demo2_ArrayOfLabels", "01Week05Demo2_ArrayOfLabels\01Week05Demo2_ArrayOfLabels.csproj", "{1ED4A8C2-6032-4ED8-BD35-637A14306F53}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01Week05Demo2_ArrayOfLabels", "01Week05Demo2_ArrayOfLabels\01Week05Demo2_ArrayOfLabels.csproj", "{1ED4A8C2-6032-4ED8-BD35-637A14306F53}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01Week06Demo1_PlayingWithCollections", "01Week06Demo1_PlayingWithCollections\01Week06Demo1_PlayingWithCollections.csproj", "{DC7A4759-6DDE-449B-A3F2-208443A67AB2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{1ED4A8C2-6032-4ED8-BD35-637A14306F53}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1ED4A8C2-6032-4ED8-BD35-637A14306F53}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1ED4A8C2-6032-4ED8-BD35-637A14306F53}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC7A4759-6DDE-449B-A3F2-208443A67AB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC7A4759-6DDE-449B-A3F2-208443A67AB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC7A4759-6DDE-449B-A3F2-208443A67AB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC7A4759-6DDE-449B-A3F2-208443A67AB2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
