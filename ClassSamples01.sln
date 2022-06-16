@@ -21,7 +21,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01Week06Demo1_PlayingWithCo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01Week6Demo2_ColorSwatch", "01Week6Demo2_ColorSwatch\01Week6Demo2_ColorSwatch.csproj", "{65734BCE-B2E3-4912-A41D-9A4E017746E1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01Week7Demo1_DroidClass", "01Week7Demo1_DroidClass\01Week7Demo1_DroidClass.csproj", "{EA56496C-2A05-43FC-9F12-3820BBE626B4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01Week7Demo1_DroidClass", "01Week7Demo1_DroidClass\01Week7Demo1_DroidClass.csproj", "{EA56496C-2A05-43FC-9F12-3820BBE626B4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Week07_Demo_Classes1", "01Week7Demo2_Classes_DroidFactory\Week07_Demo_Classes1.csproj", "{3173F9B5-2F1E-418A-8532-E48A930A67FE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +71,10 @@ Global
 		{EA56496C-2A05-43FC-9F12-3820BBE626B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EA56496C-2A05-43FC-9F12-3820BBE626B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EA56496C-2A05-43FC-9F12-3820BBE626B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3173F9B5-2F1E-418A-8532-E48A930A67FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3173F9B5-2F1E-418A-8532-E48A930A67FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3173F9B5-2F1E-418A-8532-E48A930A67FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3173F9B5-2F1E-418A-8532-E48A930A67FE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
