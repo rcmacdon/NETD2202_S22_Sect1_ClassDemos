@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 using System.Drawing;
 #endregion
 
-namespace Week08_Demo1_Classes2
+namespace W8_Collections
 {
     class Trooper
     {

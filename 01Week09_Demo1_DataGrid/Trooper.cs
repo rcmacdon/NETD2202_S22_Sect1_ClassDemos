@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 using System.Drawing;
 #endregion
 
-namespace Week08_Demo1_Classes2
+namespace _01Week09_Demo1_DataGrid
 {
     class Trooper
     {
