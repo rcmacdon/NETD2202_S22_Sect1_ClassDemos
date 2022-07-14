@@ -15,6 +15,7 @@ namespace _01Week10_MultiFormEditor
 
         #region Global Vars
         List<String> Planets = new List<String>();
+        int TrooperID = 0;
         #endregion
 
         public Editor()
@@ -22,11 +23,25 @@ namespace _01Week10_MultiFormEditor
             InitializeComponent();
         }
 
+        public Editor(int trooperID)
+        {
+            InitializeComponent();
+            TrooperID = trooperID;
+        }
+
         private void Editor_Load(object sender, EventArgs e)
         {
             PopulatePlanets();
             this.cboPlanets.DataSource = Planets;
-            SetDefaults();
+            if (TrooperID > 0)
+            {   // editing an existing trooper
+                Trooper trp = Trooper.FindTrooper(TrooperID);
+                PopulateTrooper(trp);
+            } else
+            {   // adding a new trooper
+                SetDefaults();
+            }
+
         }
 
         #region Custom Methods
@@ -77,6 +92,45 @@ namespace _01Week10_MultiFormEditor
         private void btnReset_Click(object sender, EventArgs e)
         {
             SetDefaults();
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            Trooper trp = new Trooper();
+            // do not do designation as it is autonumber
+            trp.NickName = txtNickName.Text;
+            trp.Unit = txtUnit.Text;
+            trp.IsDefective = chkDefective.Checked;
+            trp.HairColor = lblHairColour.BackColor;
+            trp.EyeColor = lblEyeColour.BackColor;
+            trp.HomeWorld = cboPlanets.SelectedValue.ToString();
+            trp.Born = dtpBorn.Value;
+
+            if (this.nudDesignation.Value == 0)
+            {   // adding a new trooper
+                Trooper.troopers.Add(trp);
+            } else
+            {   // editing a trooper
+                trp.Designation = (Int32)nudDesignation.Value;
+                // remove original trooper
+                Trooper.troopers.Remove(Trooper.FindTrooper(trp.Designation));
+                // add the replacement back in
+                Trooper.troopers.Add(trp);
+            }
+
+            this.Close();
+        }
+
+        private void btnSetHairColour_Click(object sender, EventArgs e)
+        {
+            colorDialog1.ShowDialog();
+            lblHairColour.BackColor = colorDialog1.Color;
+        }
+
+        private void btnSetEyeColour_Click(object sender, EventArgs e)
+        {
+            colorDialog1.ShowDialog();
+            lblEyeColour.BackColor = colorDialog1.Color;
         }
     }
 }

@@ -49,6 +49,7 @@ namespace _01Week10_MultiFormEditor
             this.lblDesignation = new System.Windows.Forms.Label();
             this.btnReset = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudDesignation)).BeginInit();
             this.SuspendLayout();
@@ -74,9 +75,11 @@ namespace _01Week10_MultiFormEditor
             this.groupBox1.Controls.Add(this.nudDesignation);
             this.groupBox1.Controls.Add(this.lblDesignation);
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(12, 42);
+            this.groupBox1.Location = new System.Drawing.Point(14, 56);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(447, 254);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox1.Size = new System.Drawing.Size(511, 339);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Add/Edit";
@@ -84,9 +87,10 @@ namespace _01Week10_MultiFormEditor
             // chkDefective
             // 
             this.chkDefective.AutoSize = true;
-            this.chkDefective.Location = new System.Drawing.Point(103, 217);
+            this.chkDefective.Location = new System.Drawing.Point(118, 289);
+            this.chkDefective.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chkDefective.Name = "chkDefective";
-            this.chkDefective.Size = new System.Drawing.Size(75, 19);
+            this.chkDefective.Size = new System.Drawing.Size(94, 24);
             this.chkDefective.TabIndex = 17;
             this.chkDefective.Text = "Defective";
             this.chkDefective.UseVisualStyleBackColor = true;
@@ -94,28 +98,30 @@ namespace _01Week10_MultiFormEditor
             // btnSetEyeColour
             // 
             this.btnSetEyeColour.ForeColor = System.Drawing.Color.Black;
-            this.btnSetEyeColour.Location = new System.Drawing.Point(385, 63);
+            this.btnSetEyeColour.Location = new System.Drawing.Point(440, 84);
+            this.btnSetEyeColour.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSetEyeColour.Name = "btnSetEyeColour";
-            this.btnSetEyeColour.Size = new System.Drawing.Size(45, 38);
+            this.btnSetEyeColour.Size = new System.Drawing.Size(51, 51);
             this.btnSetEyeColour.TabIndex = 16;
             this.btnSetEyeColour.Text = "Set";
             this.btnSetEyeColour.UseVisualStyleBackColor = true;
+            this.btnSetEyeColour.Click += new System.EventHandler(this.btnSetEyeColour_Click);
             // 
             // lblEyeColour
             // 
             this.lblEyeColour.BackColor = System.Drawing.Color.Gray;
             this.lblEyeColour.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblEyeColour.Location = new System.Drawing.Point(335, 63);
+            this.lblEyeColour.Location = new System.Drawing.Point(383, 84);
             this.lblEyeColour.Name = "lblEyeColour";
-            this.lblEyeColour.Size = new System.Drawing.Size(43, 38);
+            this.lblEyeColour.Size = new System.Drawing.Size(49, 51);
             this.lblEyeColour.TabIndex = 15;
             // 
             // lblSecondColourLabel
             // 
             this.lblSecondColourLabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblSecondColourLabel.Location = new System.Drawing.Point(251, 63);
+            this.lblSecondColourLabel.Location = new System.Drawing.Point(287, 84);
             this.lblSecondColourLabel.Name = "lblSecondColourLabel";
-            this.lblSecondColourLabel.Size = new System.Drawing.Size(78, 38);
+            this.lblSecondColourLabel.Size = new System.Drawing.Size(89, 51);
             this.lblSecondColourLabel.TabIndex = 14;
             this.lblSecondColourLabel.Text = "Eye Colour";
             this.lblSecondColourLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -123,116 +129,123 @@ namespace _01Week10_MultiFormEditor
             // btnSetHairColour
             // 
             this.btnSetHairColour.ForeColor = System.Drawing.Color.Black;
-            this.btnSetHairColour.Location = new System.Drawing.Point(385, 19);
+            this.btnSetHairColour.Location = new System.Drawing.Point(440, 25);
+            this.btnSetHairColour.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSetHairColour.Name = "btnSetHairColour";
-            this.btnSetHairColour.Size = new System.Drawing.Size(45, 38);
+            this.btnSetHairColour.Size = new System.Drawing.Size(51, 51);
             this.btnSetHairColour.TabIndex = 13;
             this.btnSetHairColour.Text = "Set";
             this.btnSetHairColour.UseVisualStyleBackColor = true;
+            this.btnSetHairColour.Click += new System.EventHandler(this.btnSetHairColour_Click);
             // 
             // lblHairColour
             // 
             this.lblHairColour.BackColor = System.Drawing.Color.Gray;
             this.lblHairColour.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.lblHairColour.Location = new System.Drawing.Point(335, 19);
+            this.lblHairColour.Location = new System.Drawing.Point(383, 25);
             this.lblHairColour.Name = "lblHairColour";
-            this.lblHairColour.Size = new System.Drawing.Size(43, 38);
+            this.lblHairColour.Size = new System.Drawing.Size(49, 51);
             this.lblHairColour.TabIndex = 12;
             // 
             // lblColour1Label
             // 
             this.lblColour1Label.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblColour1Label.Location = new System.Drawing.Point(251, 19);
+            this.lblColour1Label.Location = new System.Drawing.Point(287, 25);
             this.lblColour1Label.Name = "lblColour1Label";
-            this.lblColour1Label.Size = new System.Drawing.Size(76, 38);
+            this.lblColour1Label.Size = new System.Drawing.Size(87, 51);
             this.lblColour1Label.TabIndex = 11;
             this.lblColour1Label.Text = "Hair Colour";
             this.lblColour1Label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // txtUnit
             // 
-            this.txtUnit.Location = new System.Drawing.Point(103, 174);
+            this.txtUnit.Location = new System.Drawing.Point(118, 232);
+            this.txtUnit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtUnit.Name = "txtUnit";
-            this.txtUnit.Size = new System.Drawing.Size(100, 23);
+            this.txtUnit.Size = new System.Drawing.Size(114, 27);
             this.txtUnit.TabIndex = 9;
             // 
             // lblUnit
             // 
             this.lblUnit.AutoSize = true;
-            this.lblUnit.Location = new System.Drawing.Point(21, 177);
+            this.lblUnit.Location = new System.Drawing.Point(24, 236);
             this.lblUnit.Name = "lblUnit";
-            this.lblUnit.Size = new System.Drawing.Size(29, 15);
+            this.lblUnit.Size = new System.Drawing.Size(36, 20);
             this.lblUnit.TabIndex = 8;
             this.lblUnit.Text = "Unit";
             // 
             // dtpBorn
             // 
-            this.dtpBorn.Location = new System.Drawing.Point(103, 133);
+            this.dtpBorn.Location = new System.Drawing.Point(118, 177);
+            this.dtpBorn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dtpBorn.Name = "dtpBorn";
-            this.dtpBorn.Size = new System.Drawing.Size(163, 23);
+            this.dtpBorn.Size = new System.Drawing.Size(186, 27);
             this.dtpBorn.TabIndex = 7;
             // 
             // lblBorn
             // 
             this.lblBorn.AutoSize = true;
-            this.lblBorn.Location = new System.Drawing.Point(21, 139);
+            this.lblBorn.Location = new System.Drawing.Point(24, 185);
             this.lblBorn.Name = "lblBorn";
-            this.lblBorn.Size = new System.Drawing.Size(32, 15);
+            this.lblBorn.Size = new System.Drawing.Size(40, 20);
             this.lblBorn.TabIndex = 6;
             this.lblBorn.Text = "Born";
             // 
             // cboPlanets
             // 
             this.cboPlanets.FormattingEnabled = true;
-            this.cboPlanets.Location = new System.Drawing.Point(103, 98);
+            this.cboPlanets.Location = new System.Drawing.Point(118, 131);
+            this.cboPlanets.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cboPlanets.Name = "cboPlanets";
-            this.cboPlanets.Size = new System.Drawing.Size(121, 23);
+            this.cboPlanets.Size = new System.Drawing.Size(138, 28);
             this.cboPlanets.TabIndex = 5;
             // 
             // lblHomeWorld
             // 
             this.lblHomeWorld.AutoSize = true;
-            this.lblHomeWorld.Location = new System.Drawing.Point(21, 101);
+            this.lblHomeWorld.Location = new System.Drawing.Point(24, 135);
             this.lblHomeWorld.Name = "lblHomeWorld";
-            this.lblHomeWorld.Size = new System.Drawing.Size(75, 15);
+            this.lblHomeWorld.Size = new System.Drawing.Size(94, 20);
             this.lblHomeWorld.TabIndex = 4;
             this.lblHomeWorld.Text = "Home World";
             // 
             // txtNickName
             // 
-            this.txtNickName.Location = new System.Drawing.Point(103, 60);
+            this.txtNickName.Location = new System.Drawing.Point(118, 80);
+            this.txtNickName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNickName.Name = "txtNickName";
-            this.txtNickName.Size = new System.Drawing.Size(100, 23);
+            this.txtNickName.Size = new System.Drawing.Size(114, 27);
             this.txtNickName.TabIndex = 3;
             // 
             // lblNickName
             // 
             this.lblNickName.AutoSize = true;
-            this.lblNickName.Location = new System.Drawing.Point(21, 63);
+            this.lblNickName.Location = new System.Drawing.Point(24, 84);
             this.lblNickName.Name = "lblNickName";
-            this.lblNickName.Size = new System.Drawing.Size(66, 15);
+            this.lblNickName.Size = new System.Drawing.Size(82, 20);
             this.lblNickName.TabIndex = 2;
             this.lblNickName.Text = "Nick Name";
             // 
             // nudDesignation
             // 
             this.nudDesignation.Enabled = false;
-            this.nudDesignation.Location = new System.Drawing.Point(103, 23);
+            this.nudDesignation.Location = new System.Drawing.Point(118, 31);
+            this.nudDesignation.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.nudDesignation.Maximum = new decimal(new int[] {
             9999,
             0,
             0,
             0});
             this.nudDesignation.Name = "nudDesignation";
-            this.nudDesignation.Size = new System.Drawing.Size(85, 23);
+            this.nudDesignation.Size = new System.Drawing.Size(97, 27);
             this.nudDesignation.TabIndex = 1;
             // 
             // lblDesignation
             // 
             this.lblDesignation.AutoSize = true;
-            this.lblDesignation.Location = new System.Drawing.Point(21, 25);
+            this.lblDesignation.Location = new System.Drawing.Point(24, 33);
             this.lblDesignation.Name = "lblDesignation";
-            this.lblDesignation.Size = new System.Drawing.Size(70, 15);
+            this.lblDesignation.Size = new System.Drawing.Size(89, 20);
             this.lblDesignation.TabIndex = 0;
             this.lblDesignation.Text = "Designation";
             // 
@@ -240,9 +253,10 @@ namespace _01Week10_MultiFormEditor
             // 
             this.btnReset.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnReset.ForeColor = System.Drawing.Color.Black;
-            this.btnReset.Location = new System.Drawing.Point(303, 307);
+            this.btnReset.Location = new System.Drawing.Point(346, 409);
+            this.btnReset.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(75, 43);
+            this.btnReset.Size = new System.Drawing.Size(86, 57);
             this.btnReset.TabIndex = 19;
             this.btnReset.Text = "&Reset";
             this.btnReset.UseVisualStyleBackColor = true;
@@ -252,24 +266,27 @@ namespace _01Week10_MultiFormEditor
             // 
             this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSave.ForeColor = System.Drawing.Color.Black;
-            this.btnSave.Location = new System.Drawing.Point(384, 307);
+            this.btnSave.Location = new System.Drawing.Point(439, 409);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 43);
+            this.btnSave.Size = new System.Drawing.Size(86, 57);
             this.btnSave.TabIndex = 18;
             this.btnSave.Text = "&Save";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // Editor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(473, 360);
+            this.ClientSize = new System.Drawing.Size(538, 469);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnSave);
-            this.MaximumSize = new System.Drawing.Size(489, 399);
-            this.MinimumSize = new System.Drawing.Size(489, 399);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MaximumSize = new System.Drawing.Size(556, 516);
+            this.MinimumSize = new System.Drawing.Size(556, 516);
             this.Name = "Editor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Editor";
@@ -303,5 +320,6 @@ namespace _01Week10_MultiFormEditor
         private System.Windows.Forms.Label lblDesignation;
         private System.Windows.Forms.Button btnReset;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.ColorDialog colorDialog1;
     }
 }
